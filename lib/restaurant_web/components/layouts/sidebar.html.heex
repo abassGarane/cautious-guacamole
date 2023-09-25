@@ -1,32 +1,80 @@
-<aside class="col-span-1">
-				<div class="flex flex-col h-screen items-center pt-4 relative">
-								<.link href={~p"/"} class="flex flex-col items-center justify-center rounded-xl group hover:shadow space-y-2 hover:bg-yellow-100 w-[75px] h-[90px]">
-										<.icon name="hero-home-solid" class="h-5 w-5 text-gray-600 group hover:shadow space-y-2-hover:text-yellow-700"></.icon>
-										<small class="font-semibold text-xs font-sans text-gray-700 group hover:shadow space-y-2-hover:text-yellow-800">Home</small>
-								</.link>
-<.link href={~p"/"} class="flex flex-col items-center justify-center rounded-xl group hover:shadow space-y-2 hover:bg-yellow-100 w-[75px] h-[90px]">
-										<.icon name="hero-shopping-cart-solid" class="h-5 w-5 text-gray-600 group hover:shadow space-y-2-hover:text-yellow-700"></.icon>
-										<small class="font-semibold text-xs font-sans text-gray-700 group hover:shadow space-y-2-hover:text-yellow-800">Orders</small>
-								</.link>
-<.link href={~p"/"} class="flex flex-col items-center justify-center rounded-xl group hover:shadow space-y-2 hover:bg-yellow-100 w-[75px] h-[90px] p-1">
-										<.icon name="hero-chart-bar-solid" class="h-5 w-5 text-gray-600 group hover:shadow space-y-2-hover:text-yellow-700"></.icon>
-										<small class="font-semibold text-xs font-sans text-gray-700 group hover:shadow space-y-2-hover:text-yellow-800">Analytics</small>
-								</.link>
-<.link href={~p"/"} class="flex flex-col items-center justify-center rounded-xl group hover:shadow space-y-2 hover:bg-yellow-100 w-[75px] h-[90px]">
-										<.icon name="hero-chart-bar-solid" class="h-5 w-5 text-gray-600 group hover:shadow space-y-2-hover:text-yellow-700"></.icon>
-										<small class="font-semibold text-xs font-sans text-gray-700 group hover:shadow space-y-2-hover:text-yellow-800">Reports</small>
-								</.link>
-<.link href={~p"/"} class="flex flex-col items-center justify-center rounded-xl group hover:shadow space-y-2 hover:bg-yellow-100 w-[75px] h-[90px]">
-										<.icon name="hero-cog-6-tooth-solid" class="h-5 w-5 text-gray-600 group hover:shadow space-y-2-hover:text-yellow-700"></.icon>
-										<small class="font-semibold font-sans text-gray-700 group hover:shadow space-y-2-hover:text-yellow-800">Settings</small>
-								</.link>
+<aside class="col-span-1 hidden lg:block">
+  <div class="flex flex-col h-screen items-center pt-4 relative space-y-2">
+    <.l ink
+      href={~p"/dashboard"}
+      class="flex flex-col items-center justify-center rounded-xl group space-y-2 bg-yellow-200 shadow w-[70px] h-[75px]"
+    >
+      <.icon name="hero-home-solid" class="h-4 w-4  space-y-2 text-yellow-700" />
+      <small class="font-semibold text-xs font-sans  space-y-2 text-yellow-600">
+        Home
+      </small>
+    </.link>
+    <.link
+      href={~p"/orders"}
+      class="flex flex-col items-center justify-center rounded-xl group space-y-2 hover:bg-yellow-200 hover:shadow w-[70px] h-[75px]"
+    >
+      <.icon
+        name="hero-shopping-cart-solid"
+        class="h-4 w-4 text-gray-800 group space-y-2 group-hover:text-yellow-700"
+      />
+      <small class="font-semibold text-xs font-sans text-gray-700 space-y-2 group-hover:text-yellow-600">
+        Orders
+      </small>
+    </.link>
+    <.link
+      href={~p"/analytics"}
+      class="flex flex-col items-center justify-center rounded-xl group space-y-2 hover:bg-yellow-200 hover:shadow w-[70px] h-[75px] p-1"
+    >
+      <.icon
+        name="hero-chart-bar-solid"
+        class="h-4 w-4 text-gray-800 group space-y-2 group-hover:text-yellow-700"
+      />
+      <small class="font-semibold text-xs font-sans text-gray-700 group space-y-2 group-hover:text-yellow-600">
+        Analytics
+      </small>
+    </.link>
+    <.link
+      href={~p"/"}
+      class="flex flex-col items-center justify-center rounded-xl group space-y-2 hover:bg-yellow-200 hover:shadow w-[70px] h-[75px]"
+    >
+      <.icon
+        name="hero-map-solid"
+        class="h-4 w-4 text-gray-800 group space-y-2 group-hover:text-yellow-700"
+      />
+      <small class="font-semibold text-xs font-sans text-gray-700 group space-y-2 group-hover:text-yellow-600">
+        Reports
+      </small>
+    </.link>
+    <.link
+      href={~p"/settings"}
+      class="flex flex-col items-center justify-center rounded-xl group space-y-2 hover:bg-yellow-200 hover:shadow w-[70px] h-[75px]"
+    >
+      <.icon
+        name="hero-cog-6-tooth-solid"
+        class="h-4 w-4 text-gray-800 group space-y-2 group-hover:text-yellow-700"
+      />
+      <small class="font-semibold font-sans text-gray-700 group space-y-2 group-hover:text-yellow-600">
+        Settings
+      </small>
+    </.link>
+ <.link
+      href={~p"/history"}
+      class="flex flex-col items-center justify-center rounded-xl group space-y-2 hover:bg-yellow-200 hover:shadow w-[70px] h-[75px] mb-4"
+    >
+      <.icon
+        name="hero-clock-solid"
+        class="h-5 w-5 text-gray-600 group space-y-2 group-hover:text-yellow-700"
+      />
+      <small class="font-semibold font-sans text-gray-700 group space-y-2 group-hover:text-yellow-600">
+        History
+      </small>
+    </.link>
 
-								<div class="absolute bottom-0 mt-4 left-0 right-0 flex flex-col items-center justify-center">
-												<div class="h-16 w-16 rounded-full bg-gray-200">
-																
-												</div>
-												<p>Profile</p>
-								</div>
 
-				</div>
+    <div class="absolute bottom-0 mt-4 left-0 right-0 flex flex-col items-center justify-center group hover:bg-yellow-200 rounded-xl py-2 px-1 mx-4 transition ease-in duration-200 hover:scale-110 hover:shadow mt-4">
+      <div class="h-10 w-10 rounded-full bg-gray-200 border border-yellow-300 border-spacing-1 group-hover:border-yellow-600">
+      </div>
+      <p class="text-xs text-gray-700 group-hover:text-yellow-600">Profile</p>
+    </div>
+  </div>
 </aside>

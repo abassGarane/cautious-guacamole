@@ -20,6 +20,11 @@ defmodule RestaurantWeb.Router do
     get "/", PageController, :home
 
     get "/dashboard", DashboardController, :index
+    get "/settings", SettingsController, :index
+    get "/orders", OrdersController, :index
+    get "/analytics", AnalyticsController, :index
+    get "/reports", ReportsController, :index
+    get "/history", HistoryController, :index
   end
 
   # Other scopes may use custom stacks.

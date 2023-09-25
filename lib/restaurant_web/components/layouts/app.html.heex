@@ -1,4 +1,4 @@
-<header class="px-4 sm:px-6 lg:px-8">
+<!--<header class="px-4 sm:px-6 lg:px-8">
   <div class="flex items-center justify-between border-b border-zinc-100 py-3 text-sm">
     <div class="flex items-center gap-4">
       <a href="/">
@@ -24,14 +24,15 @@
     </div>
   </div>
 </header>
+-->
 <main class="">
   <div class="mx-auto">
     <.flash_group flash={@flash} />
-		<div class="grid grid-cols-9 relative">
-			<.sidebar></.sidebar>
-			<div class="col-span-8 bg-gray-200 px-10 py-4 opacity-95">
-			<%= @inner_content %>
-			</div>
-		</div>
+    <div class="lg:grid lg:grid-cols-9 relative">
+      <.sidebar></.sidebar>
+      <div class="lg:col-span-8 bg-zinc-100 px-10 py-4 opacity-95">
+        <%= @inner_content %>
+      </div>
+    </div>
   </div>
 </main>

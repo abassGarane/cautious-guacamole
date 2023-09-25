@@ -3,10 +3,17 @@ defmodule RestaurantWeb.DashboardController do
 
   def settings(conn, _params) do
     conn
-    |>render(:settings)
+    |> render(:settings)
   end
 
+  def clarity(%{"name" => name}) do
+    IO.puts name
+  end
+
+
   def index(conn, _params) do
-    render(conn, :index)
+    # |> put_flash(:info, "here is your first flash")
+    conn
+    |> render(:index)
   end
 end
