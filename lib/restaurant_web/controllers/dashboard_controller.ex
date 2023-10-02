@@ -6,10 +6,17 @@ defmodule RestaurantWeb.DashboardController do
     |> render(:settings)
   end
 
+
+
+
+
   def clarity(%{"name" => name}) do
     IO.puts name
   end
 
+  def init do
+    Enum.map([1,2,3,4], &(&1 * &1 ))
+  end
 
   def index(conn, _params) do
     # |> put_flash(:info, "here is your first flash")

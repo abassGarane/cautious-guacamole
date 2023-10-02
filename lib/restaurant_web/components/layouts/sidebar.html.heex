@@ -1,6 +1,6 @@
 <aside class="col-span-1 hidden lg:block">
   <div class="flex flex-col h-screen items-center pt-4 relative space-y-2">
-    <.l ink
+    <.link
       href={~p"/dashboard"}
       class="flex flex-col items-center justify-center rounded-xl group space-y-2 bg-yellow-200 shadow w-[70px] h-[75px]"
     >
@@ -57,8 +57,8 @@
         Settings
       </small>
     </.link>
- <.link
-      href={~p"/history"}
+    <.link
+      href={~p"/dashboard/history"}
       class="flex flex-col items-center justify-center rounded-xl group space-y-2 hover:bg-yellow-200 hover:shadow w-[70px] h-[75px] mb-4"
     >
       <.icon
@@ -70,11 +70,13 @@
       </small>
     </.link>
 
-
-    <div class="absolute bottom-0 mt-4 left-0 right-0 flex flex-col items-center justify-center group hover:bg-yellow-200 rounded-xl py-2 px-1 mx-4 transition ease-in duration-200 hover:scale-110 hover:shadow mt-4">
+    <.link
+      href={~p"/dashboard/profile"}
+      class="absolute bottom-0  left-0 right-0 flex flex-col items-center justify-center group hover:bg-yellow-200 rounded-xl py-2 px-1 mx-4 transition ease-in duration-200 hover:scale-110 hover:shadow mt-4"
+    >
       <div class="h-10 w-10 rounded-full bg-gray-200 border border-yellow-300 border-spacing-1 group-hover:border-yellow-600">
       </div>
       <p class="text-xs text-gray-700 group-hover:text-yellow-600">Profile</p>
-    </div>
+    </.link>
   </div>
 </aside>
