@@ -50,4 +50,5 @@ defmodule RestaurantWeb.Router do
       forward "/mailbox", Plug.Swoosh.MailboxPreview
     end
   end
+
 end
