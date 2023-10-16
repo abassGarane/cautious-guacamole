@@ -1,18 +1,68 @@
-# Restaurant
+## Restaurant Management System
+-------------------------------
 
-To start your Phoenix server:
+### Models or Schemas
+---------------------
+- Menu Item
+    - Image_url
+    - Price
+    - Name
+    - Quantity or size
+- Table 
+    - Name
+    - Is Occupied
+    - Number of Chairs
+    - Is reserved
+- Order 
+    - ID 
+    - Amount
+    - Completed
+    - Order Time
+    - VenderID
+    - Table
+    - has many order items
+- Order Item
+    - Order ID 
+    - Quantity
+    - Total Price
+    - Extras
 
-  * Run `mix setup` to install and setup dependencies
-  * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
+- Payment Method
+    - Type ie Card, Cash, Mpesa
+    - Payment Completed
+    - Is Active
+- Employee
+    - Gender
+    - Role
+    - Weekly Hours 
+    - Hourly Wage
+    - Name
+    - Email
+    - Telephone Number
+    - Address
+    - Dob
+    - Postal Code
+    - Passwords -> Authentication and Authorization
+- User
+    - Name
+    - Email
+    - Password 
+    - Phone Number
+    - Physical Address (Optional)
+- Stock items
+    - Quantity
+    - Procured_at
+    - Buying Price
+    - Item Supplier ID
+- Supplier 
+    - Name
+    - Email
+    - Phone Number
+    - Precision
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
-
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
-
-## Learn more
-
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+- History
+    - User ID 
+    - Menu Item ID
+- Roles 
+    - ID 
+    - Functions 
