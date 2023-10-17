@@ -5,7 +5,7 @@ config :restaurant, Restaurant.Repo,
   username: "postgres",
   password: "postgres",
   hostname: "localhost",
-  database: "bricks",
+  database: "restaurant",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
