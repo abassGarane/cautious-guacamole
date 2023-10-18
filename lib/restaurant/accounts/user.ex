@@ -1,6 +1,5 @@
 defmodule Restaurant.Accounts.User do
-  alias Restaurant.Order
-  alias Restaurant.Address
+  alias Restaurant.{Payment, Order, Address}
   use Ecto.Schema
   import Ecto.Changeset
 
@@ -13,6 +12,7 @@ defmodule Restaurant.Accounts.User do
     embeds_many :addresses, Address, on_replace: :delete
 
     has_many :orders, Order
+    has_many :payments, Payment
 
     timestamps()
   end
