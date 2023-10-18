@@ -6,7 +6,7 @@ defmodule Restaurant.Order do
   @primary_key {:uuid, :binary_id, autogenerate: true}
 
   schema "orders" do
-    field :status, Ecto.Enum, values: [:initiated, :completed, :cancelled]
+    field :status, Ecto.Enum, values: [:initiated, :completed, :cancelled, :declined]
     timestamps()
     belongs_to :user, User
   end
