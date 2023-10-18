@@ -19,7 +19,6 @@
     - Amount
     - Completed
     - Order Time
-    - VenderID
     - Table
     - has many order items
 - Order Item

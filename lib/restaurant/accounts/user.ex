@@ -1,4 +1,5 @@
 defmodule Restaurant.Accounts.User do
+  alias Restaurant.Order
   alias Restaurant.Address
   use Ecto.Schema
   import Ecto.Changeset
@@ -10,6 +11,8 @@ defmodule Restaurant.Accounts.User do
     field :hashed_password, :string, redact: true
     field :confirmed_at, :naive_datetime
     embeds_many :addresses, Address, on_replace: :delete
+
+    has_many :orders, Order
 
     timestamps()
   end
