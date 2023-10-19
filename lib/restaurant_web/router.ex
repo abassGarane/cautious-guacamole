@@ -13,6 +13,16 @@ defmodule RestaurantWeb.Router do
     plug :fetch_current_user
   end
 
+  pipeline :restaurant_live do
+    plug :accepts, ["html"]
+    plug :fetch_session
+    plug :fetch_live_flash
+    plug :put_root_layout, html: {RestaurantWeb.Layouts, :root}
+    plug :protect_from_forgery
+    plug :put_secure_browser_headers
+    plug :fetch_current_user
+  end
+
   pipeline :api do
     plug :accepts, ["json"]
   end
@@ -21,15 +31,18 @@ defmodule RestaurantWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
-
-    get "/dashboard", DashboardController, :index
+    # get "/dashboard", DashboardController, :index
     get "/settings", SettingsController, :index
     get "/orders", OrdersController, :index
     get "/analytics", AnalyticsController, :index
     get "/reports", ReportsController, :index
     get "/history", HistoryController, :index
+    live "/dashboard", DashboardLive
     live "/dashboard/history", HistoryLive
+    live "/dashboard/orders", OrdersLive
     live "/dashboard/profile", ProfileLive
+    live "/dashboard/settings", SettingsLive
+    live "/dashboard/analytics", AnalyticsLive
   end
 
   # Other scopes may use custom stacks.
@@ -53,7 +66,6 @@ defmodule RestaurantWeb.Router do
       forward "/mailbox", Plug.Swoosh.MailboxPreview
     end
   end
-
 
   ## Authentication routes
 

@@ -5,7 +5,4 @@ defmodule RestaurantWeb.ProfileLive do
     socket = assign(socket, :count, 10)
     {:ok, socket}
   end
-
-  def on_change() do
-  end
 end
