@@ -1,11 +1,16 @@
 <div class="flex flex-col space-y-4">
-  <div class="flex flex-row items-center space-x-4 p-4">
-    <span class="bg-orange-200 rounded-2xl px-2 py-1  w text-orange-600 shadow text-center">
-      On process
-    </span>
-    <span class="bg-gray-200 rounded-2xl px-2 py-1  w text-gray-600 shadow text-center">
-      Completed
-    </span>
+  <div class="flex flex-row justify-between p-4">
+    <div class="flex flex-row items-center space-x-4">
+      <span class="bg-orange-200 rounded-2xl px-2 py-1  w text-orange-600 shadow text-center">
+        On process
+      </span>
+      <span class="bg-gray-200 rounded-2xl px-2 py-1  w text-gray-600 shadow text-center">
+        Completed
+      </span>
+    </div>
+    <div class="flex flex-row">
+      <.live_component module={RestaurantWeb.CreateOrder} id="create_order" />
+    </div>
   </div>
 
   <div class="grid grid-cols-1 lg:grid-cols-6 gap-2 w-full mt-3">
