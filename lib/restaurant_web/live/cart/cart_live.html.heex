@@ -1,0 +1,20 @@
+<h1 class="font-semibold text-2xl text-center py-4 tracking-narrow">Your Cart</h1>
+<div class="grid grid-cols-1 md:gap-3 md:grid-cols-4 gap-1">
+  <table class="w-full text-sm text-left text-gray-600 dark:text-gray-400 relative overflow-x-auto md:col-span-3">
+    <thead class="text-xs text-gray-700 uppercase border-b  dark:bg-gray-700 dark:text-gray-400">
+      <tr>
+        <th scope="col" class="px-6 py-3">Product</th>
+        <th scope="col" class="px-6 py-3">Price</th>
+        <th scope="col" class="px-6 py-3">Quantity</th>
+        <th scope="col" class="px-6 py-3">Total</th>
+        <th scope="col" class="px-6 py-3">Actions</th>
+      </tr>
+    </thead>
+    <tbody class="border-b odd:bg-gray-100">
+      <%= for item <- @items do %>
+        <.cart_item item={item} />
+      <% end %>
+    </tbody>
+  </table>
+  <.order_summary />
+</div>

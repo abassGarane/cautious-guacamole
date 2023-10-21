@@ -43,6 +43,7 @@ defmodule RestaurantWeb.Router do
     live "/dashboard/profile", ProfileLive
     live "/dashboard/settings", SettingsLive
     live "/dashboard/analytics", AnalyticsLive
+    live "/dashboard/cart", CartLive
   end
 
   # Other scopes may use custom stacks.

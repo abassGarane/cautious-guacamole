@@ -1,0 +1,7 @@
+{
+    "tailwindCSS.emmetCompletions": true,
+    "tailwindCSS.experimental.configFile": null,
+    "tailwindCSS.includeLanguages": {
+        "heex": "heex"
+    }
+}
